@@ -89,7 +89,7 @@ export const mockData = {
     curriculumItems: [
         { icon: BookOpen, title: 'Language & Literacy', text: 'Developing reading, writing, and communication skills through stories, phonics, rhymes, and role play activities.' },
         { icon: Palette, title: 'Creative Arts', text: 'Fostering imagination and self-expression through hands-on learning activities like drawing, painting, and crafts' },
-        { icon: FlaskConical, title: 'STEM & Robotics', text: 'Hands-on science, math, and early robotics activities that spark curiosity, build problem-solving skills, and introduce young minds to the world of technology in a fun and playful way.' },
+        { icon: FlaskConical, title: 'STEM', text: 'Hands-on science, math, and activities that spark curiosity, build problem-solving skills, and introduce young minds to the world of technology in a fun and playful way.' },
     ],
     socialMedia: [
         { icon: '/images/facebook.png', link: 'https://www.facebook.com/people/Keiko-kids/61578728698763/', alt: 'facebook' },
