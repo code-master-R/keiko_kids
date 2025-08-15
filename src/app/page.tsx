@@ -5,7 +5,6 @@ import { theme } from "@/config/theme"; // We will use the new vibrant theme fro
 import { mockData } from "@/data/mockData";
 import { ChevronsRight, Sparkles } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
 
 // A new, more enthusiastic Section Header for the lively page
 const LivelySectionHeader = ({ title, subtitle }: { title: string, subtitle: string }) => (
@@ -18,16 +17,7 @@ const LivelySectionHeader = ({ title, subtitle }: { title: string, subtitle: str
 
 
 const HomePage = () => {
-  // const [currentTestimonial, setCurrentTestimonial] = useState(0);
-  const [isMounted, setIsMounted] = useState(false);
 
-  // useEffect(() => {
-  //   setIsMounted(true);
-  //   const timer = setInterval(() => {
-  //     setCurrentTestimonial((prev) => (prev + 1) % mockData.testimonials.length);
-  //   }, 5000);
-  //   return () => clearInterval(timer);
-  // }, []);
 
   return (
     <div className="bg-white">

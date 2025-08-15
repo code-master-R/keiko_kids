@@ -11,7 +11,6 @@ import { useState } from 'react';
 interface ProgramCardProps {
     title: string;
     ageRange: string;
-    description: string;
     points: string[];
     imageUrl: string;
     imageAlt?: string;
@@ -23,7 +22,6 @@ interface ProgramCardProps {
 const ProgramCard = ({
     title,
     ageRange,
-    description,
     points,
     imageUrl,
     imageAlt = 'Program illustration',
@@ -54,8 +52,6 @@ const ProgramCard = ({
                     className="rounded-2xl" // Keeps the corners rounded
                 />
             </div>
-
-            <p className="text-lg">{description}</p>
 
             <ul className="text-left space-y-2 text-lg mt-4">
                 {displayedPoints.map((point, index) => (

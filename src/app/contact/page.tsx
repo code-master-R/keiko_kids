@@ -53,7 +53,7 @@ const ContactPage = () => {
 
                         <form onSubmit={handleSubmit} className="space-y-4">
                             <div>
-                                <label htmlFor="parentName" className="sr-only">Parent's Name</label>
+                                <label htmlFor="parentName" className="sr-only">Parent&apos;s Name</label>
                                 <input id="parentName" type="text" name="parentName" placeholder="Parent's Name" className="w-full p-4 border-2 border-gray-200 rounded-xl focus:border-orange-400 outline-none" required />
                             </div>
                             <div>
@@ -65,9 +65,9 @@ const ContactPage = () => {
                                 <input id="email" type="email" name="email" placeholder="Email Address" className="w-full p-4 border-2 border-gray-200 rounded-xl focus:border-orange-400 outline-none" required />
                             </div>
                             <div>
-                                <label htmlFor="childAge" className="sr-only">Child's Age</label>
+                                <label htmlFor="childAge" className="sr-only">Child&apos;s Age</label>
                                 <select id="childAge" name="childAge" className="w-full p-4 border-2 border-gray-200 rounded-xl focus:border-orange-400 outline-none bg-white" required>
-                                    <option value="1 year" disabled selected>Select Child's Age</option>
+                                    <option value="1 year" disabled selected>Select Child&apos;s Age</option>
                                     <option value="6 months - 1 year">6 months - 1 year</option>
                                     <option value="1 - 2 years">1 - 2 years</option>
                                     <option value="2 - 3 years">2 - 3 years</option>

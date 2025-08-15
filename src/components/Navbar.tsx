@@ -2,13 +2,8 @@
 
 import { theme } from '@/config/theme';
 import { Menu, X } from 'lucide-react';
-import localFont from 'next/font/local';
 import Link from 'next/link';
 import { useState } from 'react';
-
-const hiddenCocktails = localFont({
-    src: '../fonts/HiddencocktailsItalic-nRXdY.ttf', // Adjust path if your font file is named differently
-});
 
 const Navbar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);

@@ -103,7 +103,7 @@ const AboutPage = () => {
 
                             <div className="bg-[#1A4B55] text-white max-w-3xl mx-auto p-8 md:p-12 rounded-3xl text-center">
                                 <h3 className="text-3xl md:text-4xl font-bold flex items-center justify-center gap-x-3">
-                                    Let's Build Their Future Together
+                                    Let&apos;s Build Their Future Together
                                     <span className="text-orange-400 text-4xl">♥</span>
                                 </h3>
                                 <p className="mt-4 text-lg max-w-xl mx-auto">

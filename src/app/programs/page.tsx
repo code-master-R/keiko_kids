@@ -5,7 +5,6 @@ import Image from 'next/image';
 
 
 const ProgramsPage = () => {
-    const cardColors = ['#FFC0CB', '#ADD8E6', '#98FB98', '#FFDAB9']; // Pink, Light Blue, Pale Green, Peach
 
     return (
         <div className="py-20 pt-40 relative overflow-hidden"
