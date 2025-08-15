@@ -37,9 +37,14 @@ const ContactPage = () => {
 
             setStatus('success');
             (event.target as HTMLFormElement).reset(); // Reset form on success
-        } catch (error: any) {
+        } catch (error: unknown) { // FIX: Changed type from 'any' to 'unknown'
             setStatus('error');
-            setErrorMessage(error.message);
+            // FIX: Check if the error is an instance of Error before accessing .message
+            if (error instanceof Error) {
+                setErrorMessage(error.message);
+            } else {
+                setErrorMessage('An unexpected error occurred.');
+            }
         }
     };
 
