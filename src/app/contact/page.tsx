@@ -109,7 +109,7 @@ const ContactPage = () => {
                             <div>
                                 <h4 className="text-2xl font-bold" style={{ color: theme.colors.heading }}>Chat on WhatsApp</h4>
                                 <a
-                                    href="https://wa.me/8459685005" // <-- REPLACE with your number
+                                    href="https://wa.me/845968" // <-- REPLACE with your number
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="text-lg text-gray-600 hover:underline"
