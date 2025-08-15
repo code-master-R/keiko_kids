@@ -3,7 +3,7 @@
 import MotionDiv from '@/components/ui/MotionDiv';
 import SectionHeader from '@/components/ui/SectionHeader';
 import { theme } from '@/config/theme';
-import { Mail, MapPin, PhoneCall } from 'lucide-react';
+import { Mail, MapPin, MessageSquare, PhoneCall } from 'lucide-react';
 import React, { useState } from 'react';
 
 const ContactPage = () => {
@@ -104,6 +104,20 @@ const ContactPage = () => {
                         <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl"><MapPin className="h-10 w-10 mt-1 flex-shrink-0" style={{ color: theme.colors.primary }} /><div><h4 className="text-2xl font-bold" style={{ color: theme.colors.heading }}>Visit Us</h4><p className="text-lg text-gray-600">Keiko Kids, ShivKamal  Bungalow, vishal nagar , dp road , pune</p></div></div>
                         <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl"><PhoneCall className="h-10 w-10 mt-1 flex-shrink-0" style={{ color: theme.colors.primary }} /><div><h4 className="text-2xl font-bold" style={{ color: theme.colors.heading }}>Call Us</h4><p className="text-lg text-gray-600">+91 90216 97977, +91 77000 55694</p></div></div>
                         <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl"><Mail className="h-10 w-10 mt-1 flex-shrink-0" style={{ color: theme.colors.primary }} /><div><h4 className="text-2xl font-bold" style={{ color: theme.colors.heading }}>Email Us</h4><p className="text-lg text-gray-600">keikokidspune@gmail.com</p></div></div>
+                        <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl shadow-md">
+                            <MessageSquare className="h-10 w-10 mt-1 flex-shrink-0" style={{ color: theme.colors.accent }} />
+                            <div>
+                                <h4 className="text-2xl font-bold" style={{ color: theme.colors.heading }}>Chat on WhatsApp</h4>
+                                <a
+                                    href="https://wa.me/8459685005" // <-- REPLACE with your number
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-lg text-gray-600 hover:underline"
+                                >
+                                    Click here to start a chat
+                                </a>
+                            </div>
+                        </div>
                         <div className="mt-8 h-64 bg-gray-200 rounded-2xl shadow-md overflow-hidden">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.7173043616417!2d73.77838347496463!3d18.586779482519674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b90e572100db%3A0xe0bc9fecf964d9a1!2sShivKamal%20Bungalow!5e0!3m2!1sen!2sin!4v1753765842372!5m2!1sen!2sin"
