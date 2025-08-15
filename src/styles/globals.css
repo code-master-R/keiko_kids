@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background-color: #f8f9fa;
+    /* Corresponds to theme.colors.lightBg */
+    font-family: sans-serif;
+}
