@@ -3,7 +3,7 @@
 import MotionDiv from '@/components/ui/MotionDiv';
 import SectionHeader from '@/components/ui/SectionHeader';
 import { theme } from '@/config/theme';
-import { Mail, MapPin, MessageSquare, PhoneCall } from 'lucide-react';
+import { Mail, MapPin, PhoneCall } from 'lucide-react';
 import React, { useState } from 'react';
 
 const ContactPage = () => {
@@ -59,19 +59,19 @@ const ContactPage = () => {
                         <form onSubmit={handleSubmit} className="space-y-4">
                             <div>
                                 <label htmlFor="parentName" className="sr-only">Parent&apos;s Name</label>
-                                <input id="parentName" type="text" name="parentName" placeholder="Parent's Name" className="w-full p-4 border-2 border-gray-200 rounded-xl focus:border-orange-400 outline-none" required />
+                                <input id="parentName" type="text" name="parentName" placeholder="Parent's Name" className="w-full p-4 border-2 border-gray-200 rounded-xl focus:border-orange-400 outline-none text-gray-800 placeholder:text-gray-500" required />
                             </div>
                             <div>
                                 <label htmlFor="mobile" className="sr-only">Mobile Number</label>
-                                <input id="mobile" type="number" name="mobile" placeholder="Mobile Number" className="w-full p-4 border-2 border-gray-200 rounded-xl focus:border-orange-400 outline-none" required />
+                                <input id="mobile" type="number" name="mobile" placeholder="Mobile Number" className="w-full p-4 border-2 border-gray-200 rounded-xl focus:border-orange-400 outline-none text-gray-800 placeholder:text-gray-500" required />
                             </div>
                             <div>
                                 <label htmlFor="email" className="sr-only">Email Address</label>
-                                <input id="email" type="email" name="email" placeholder="Email Address" className="w-full p-4 border-2 border-gray-200 rounded-xl focus:border-orange-400 outline-none" required />
+                                <input id="email" type="email" name="email" placeholder="Email Address" className="w-full p-4 border-2 border-gray-200 rounded-xl focus:border-orange-400 outline-none text-gray-800 placeholder:text-gray-500" required />
                             </div>
                             <div>
                                 <label htmlFor="childAge" className="sr-only">Child&apos;s Age</label>
-                                <select id="childAge" name="childAge" className="w-full p-4 border-2 border-gray-200 rounded-xl focus:border-orange-400 outline-none bg-white" required>
+                                <select id="childAge" name="childAge" className="w-full p-4 border-2 border-gray-200 rounded-xl focus:border-orange-400 outline-none bg-white text-gray-800" required>
                                     <option value="1 year" disabled selected>Select Child&apos;s Age</option>
                                     <option value="6 months - 1 year">6 months - 1 year</option>
                                     <option value="1 - 2 years">1 - 2 years</option>
@@ -84,7 +84,7 @@ const ContactPage = () => {
                             </div>
                             <div>
                                 <label htmlFor="enquiry" className="sr-only">Your Enquiry</label>
-                                <textarea id="enquiry" name="enquiry" rows={4} placeholder="Your Enquiry" className="w-full p-4 border-2 border-gray-200 rounded-xl focus:border-orange-400 outline-none" required></textarea>
+                                <textarea id="enquiry" name="enquiry" rows={4} placeholder="Your Enquiry" className="w-full p-4 border-2 border-gray-200 rounded-xl focus:border-orange-400 outline-none text-gray-800 placeholder:text-gray-500" required></textarea>
                             </div>
                             <button
                                 type="submit"
@@ -101,23 +101,30 @@ const ContactPage = () => {
                         </form>
                     </MotionDiv>
                     <MotionDiv direction="right" className="space-y-8">
-                        <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl"><MapPin className="h-10 w-10 mt-1 flex-shrink-0" style={{ color: theme.colors.primary }} /><div><h4 className="text-2xl font-bold" style={{ color: theme.colors.heading }}>Visit Us</h4><p className="text-lg text-gray-600">Keiko Kids, ShivKamal  Bungalow, vishal nagar , dp road , pune</p></div></div>
+                        <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl"><MapPin className="h-10 w-10 mt-1 flex-shrink-0" style={{ color: theme.colors.primary }} /><div><h4 className="text-2xl font-bold" style={{ color: theme.colors.heading }}>Visit Us</h4><p className="text-lg text-gray-600">Keiko Kids, ShivKamal  Bungalow, Vishal nagar , DP road , Pune</p></div></div>
                         <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl"><PhoneCall className="h-10 w-10 mt-1 flex-shrink-0" style={{ color: theme.colors.primary }} /><div><h4 className="text-2xl font-bold" style={{ color: theme.colors.heading }}>Call Us</h4><p className="text-lg text-gray-600">+91 90216 97977, +91 77000 55694</p></div></div>
                         <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl"><Mail className="h-10 w-10 mt-1 flex-shrink-0" style={{ color: theme.colors.primary }} /><div><h4 className="text-2xl font-bold" style={{ color: theme.colors.heading }}>Email Us</h4><p className="text-lg text-gray-600">keikokidspune@gmail.com</p></div></div>
-                        <div className="flex items-start gap-4 p-6 bg-gray-50 rounded-2xl shadow-md">
-                            <MessageSquare className="h-10 w-10 mt-1 flex-shrink-0" style={{ color: theme.colors.accent }} />
-                            <div>
-                                <h4 className="text-2xl font-bold" style={{ color: theme.colors.heading }}>Chat on WhatsApp</h4>
-                                <a
-                                    href="https://wa.me/9021697977" // <-- REPLACE with your number
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-lg text-gray-600 hover:underline"
-                                >
-                                    Click here to start a chat
-                                </a>
+                        <a
+                            href="https://wa.me/9021697977" // <-- Replace with your number
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block bg-green-50 rounded-2xl shadow-md p-6 group hover:bg-green-100 transition-colors"
+                        >
+                            <div className="flex items-start gap-4">
+                                <div className="h-13 w-13 mt-1 flex-shrink-0">
+                                    <img
+                                        src='/images/whatsapp.png'
+                                        alt='whatsapp'
+                                    />
+                                </div>
+                                {/* <MessageSquare className="h-10 w-10 mt-1 flex-shrink-0" style={{ color: theme.colors.accent }} /> */}
+                                <div>
+                                    <h4 className="text-2xl font-bold" style={{ color: theme.colors.heading }}>Chat on WhatsApp</h4>
+
+                                    <p className="text-lg text-gray-600 group-hover:underline">Click here to start a chat instantly!</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                         <div className="mt-8 h-64 bg-gray-200 rounded-2xl shadow-md overflow-hidden">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.7173043616417!2d73.77838347496463!3d18.586779482519674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b90e572100db%3A0xe0bc9fecf964d9a1!2sShivKamal%20Bungalow!5e0!3m2!1sen!2sin!4v1753765842372!5m2!1sen!2sin"
@@ -131,8 +138,8 @@ const ContactPage = () => {
                         </div>
                     </MotionDiv>
                 </div>
-            </div>
-        </div>
+            </div >
+        </div >
     );
 }
 

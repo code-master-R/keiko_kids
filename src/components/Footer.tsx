@@ -30,7 +30,7 @@ const Footer = () => {
                     <div>
                         <h3 className="text-lg font-semibold text-gray-200 tracking-wider uppercase">Contact</h3>
                         <ul className="mt-4 space-y-3">
-                            <li className="flex items-start"><MapPin className="h-5 w-5 mt-1 mr-2 flex-shrink-0 text-orange-400" /><span>Keiko Kids, ShivKamal  Bungalow, vishal nagar , dp road , pune</span></li>
+                            <li className="flex items-start"><MapPin className="h-5 w-5 mt-1 mr-2 flex-shrink-0 text-orange-400" /><span>Keiko Kids, ShivKamal  Bungalow, Vishal nagar , DP road , Pune</span></li>
                             <li className="flex items-start"><Mail className="h-5 w-5 mt-1 mr-2 flex-shrink-0 text-orange-400" /><span>keikokidspune@gmail.com</span></li>
                             <li className="flex items-start"><Phone className="h-5 w-5 mt-1 mr-2 flex-shrink-0 text-orange-400" /><span>+91 9021697977, +91 7700055694</span></li>
                         </ul>
