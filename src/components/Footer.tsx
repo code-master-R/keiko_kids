@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 
 const hiddenCocktails = localFont({
-    src: '../fonts/HiddencocktailsItalic-nRXdY.ttf', // Adjust path if your font file is named differently
+    src: '../fonts/Milkyway-demo.ttf', // Adjust path if your font file is named differently
 });
 
 const Footer = () => {

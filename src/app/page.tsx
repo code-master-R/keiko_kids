@@ -4,6 +4,7 @@ import MotionDiv from "@/components/ui/MotionDiv";
 import { theme } from "@/config/theme"; // We will use the new vibrant theme from config
 import { mockData } from "@/data/mockData";
 import { ChevronsRight, Sparkles } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 // A new, more enthusiastic Section Header for the lively page
@@ -20,18 +21,23 @@ const HomePage = () => {
 
 
   return (
-    <div className="bg-white">
+    <div className="bg-white pt-20">
 
-      <section
-        className="relative flex h-screen items-end justify-start overflow-hidden bg-cover bg-center p-8 sm:p-12 lg:p-16"
-        style={{
-          backgroundImage: "url('images/hero-banner.png')",
-          backgroundSize: 'contain',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
-      >
-        {/* Overlay for better text readability */}
+      <section className="hidden lg:flex relative flex h-screen items-end justify-start text-left overflow-hidden p-8 sm:p-12 lg:p-16">
+        {/* Background Image using Next/Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/hero-banner.png"
+            alt="Playful background for the daycare"
+            layout="fill"
+            objectFit="cover" // This makes the image cover the whole area
+            quality={85}
+            priority
+          />
+          {/* Overlay for better text readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent" />
+        </div>
+
         <div className="absolute inset-0 bg-black/30" />
 
         {/* Content container positioned relative to the section */}
@@ -53,10 +59,49 @@ const HomePage = () => {
             </Link>
           </div>
         </div>
-      </section>
+
+      </section >
+      <section className="lg:hidden relative flex h-screen items-end justify-start text-left overflow-hidden p-8 sm:p-12 lg:p-16">
+        {/* Background Image using Next/Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/hero-banner-mobile.png"
+            alt="Playful background for the daycare"
+            layout="fill"
+            objectFit="cover" // This makes the image cover the whole area
+            quality={85}
+            priority
+          />
+          {/* Overlay for better text readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent" />
+        </div>
+
+        <div className="absolute inset-0 bg-black/30" />
+
+        {/* Content container positioned relative to the section */}
+        <div className="relative z-10">
+          <div className="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
+            <Link
+              href="/programs"
+              className="inline-block w-full rounded-xl px-8 py-4 text-center text-lg font-bold text-white shadow-lg transition-transform transform hover:scale-105 sm:w-auto"
+              style={{ backgroundColor: theme.colors.primary }}
+            >
+              Our Programs
+            </Link>
+            <Link
+              href="/contact"
+              className="inline-block w-full rounded-xl px-8 py-4 text-center text-lg font-bold shadow-lg transition-transform transform hover:scale-105 sm:w-auto"
+              style={{ backgroundColor: theme.colors.secondary, color: 'white' }}
+            >
+              Schedule a Tour
+            </Link>
+          </div>
+        </div>
+
+      </section >
 
       {/* Why Choose Us Section */}
-      <section className="py-24" style={{ backgroundColor: '#FFF9E6' /* Light Yellow */ }}>
+      < section className="py-24" style={{ backgroundColor: '#FFF9E6' /* Light Yellow */ }}>
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
           <LivelySectionHeader title="Why You'll Love Keiko Kids!" subtitle="We create magical moments and meaningful learning experiences every day." />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -71,10 +116,10 @@ const HomePage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Curriculum Section */}
-      <section className="py-24 bg-white">
+      < section className="py-24 bg-white" >
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
           <LivelySectionHeader title="Our Awesome Curriculum" subtitle="Exploring the world through play, creativity, and curiosity." />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -89,10 +134,10 @@ const HomePage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Programs Section */}
-      <section className="py-24" style={{ backgroundColor: '#F0F8FF' /* Alice Blue */ }}>
+      < section className="py-24" style={{ backgroundColor: '#F0F8FF' /* Alice Blue */ }}>
         <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
           <LivelySectionHeader title="Adventures for Every Age" subtitle="Our programs are tailor-made for each stage of your child's early years." />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -110,7 +155,7 @@ const HomePage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Testimonials Section */}
       {/* <section className="py-24 bg-white">
@@ -133,7 +178,7 @@ const HomePage = () => {
           </MotionDiv>
         </div>
       </section> */}
-    </div>
+    </div >
   );
 };
 
