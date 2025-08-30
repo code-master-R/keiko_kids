@@ -23,82 +23,57 @@ const HomePage = () => {
   return (
     <div className="bg-white pt-20">
 
-      <section className="hidden lg:flex relative flex h-screen items-end justify-start text-left overflow-hidden p-8 sm:p-12 lg:p-16">
-        {/* Background Image using Next/Image */}
+      <section
+        className="relative flex items-end justify-start text-left overflow-hidden 
+      min-h-[70vh] lg:min-h-screen p-6 sm:p-12 lg:p-16"
+      >
+        {/* Background Image with mobile/desktop switching */}
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/hero-banner.png"
-            alt="Playful background for the daycare"
-            layout="fill"
-            objectFit="cover" // This makes the image cover the whole area
-            quality={85}
-            priority
-          />
-          {/* Overlay for better text readability */}
+          <picture>
+            {/* Mobile (portrait) */}
+            <source
+              media="(max-width: 768px)"
+              srcSet="/images/hero-banner-mobile.png"
+            />
+            {/* Desktop (landscape) */}
+            <Image
+              src="/images/hero-banner.png"
+              alt="Playful background for the daycare"
+              fill
+              className="object-cover"
+              priority
+              quality={85}
+            />
+          </picture>
+
+          {/* Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent" />
+          {/* Extra dark overlay for readability */}
+          <div className="absolute inset-0 bg-black/30" />
         </div>
 
-        <div className="absolute inset-0 bg-black/30" />
-
-        {/* Content container positioned relative to the section */}
-        <div className="relative z-10">
+        {/* Content */}
+        <div className="relative z-10 max-w-xl">
           <div className="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
             <Link
               href="/programs"
-              className="inline-block w-full rounded-xl px-8 py-4 text-center text-lg font-bold text-white shadow-lg transition-transform transform hover:scale-105 sm:w-auto"
+              className="inline-block w-full sm:w-auto rounded-xl px-8 py-4 text-center 
+        text-lg font-bold text-white shadow-lg transition-transform transform hover:scale-105"
               style={{ backgroundColor: theme.colors.primary }}
             >
               Our Programs
             </Link>
             <Link
               href="/contact"
-              className="inline-block w-full rounded-xl px-8 py-4 text-center text-lg font-bold shadow-lg transition-transform transform hover:scale-105 sm:w-auto"
+              className="inline-block w-full sm:w-auto rounded-xl px-8 py-4 text-center 
+        text-lg font-bold shadow-lg transition-transform transform hover:scale-105"
               style={{ backgroundColor: theme.colors.secondary, color: 'white' }}
             >
               Schedule a Tour
             </Link>
           </div>
         </div>
-
-      </section >
-      <section className="lg:hidden relative flex h-screen items-end justify-start text-left overflow-hidden p-8 sm:p-12 lg:p-16">
-        {/* Background Image using Next/Image */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/hero-banner-mobile.png"
-            alt="Playful background for the daycare"
-            layout="fill"
-            objectFit="cover" // This makes the image cover the whole area
-            quality={85}
-            priority
-          />
-          {/* Overlay for better text readability */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent" />
-        </div>
-
-        <div className="absolute inset-0 bg-black/30" />
-
-        {/* Content container positioned relative to the section */}
-        <div className="relative z-10">
-          <div className="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
-            <Link
-              href="/programs"
-              className="inline-block w-full rounded-xl px-8 py-4 text-center text-lg font-bold text-white shadow-lg transition-transform transform hover:scale-105 sm:w-auto"
-              style={{ backgroundColor: theme.colors.primary }}
-            >
-              Our Programs
-            </Link>
-            <Link
-              href="/contact"
-              className="inline-block w-full rounded-xl px-8 py-4 text-center text-lg font-bold shadow-lg transition-transform transform hover:scale-105 sm:w-auto"
-              style={{ backgroundColor: theme.colors.secondary, color: 'white' }}
-            >
-              Schedule a Tour
-            </Link>
-          </div>
-        </div>
-
-      </section >
+      </section>
 
       {/* Why Choose Us Section */}
       < section className="py-24" style={{ backgroundColor: '#FFF9E6' /* Light Yellow */ }}>
