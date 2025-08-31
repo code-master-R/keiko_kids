@@ -9,6 +9,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Keiko Kids - Preschool & Daycare",
   description: "A warm and welcoming preschool in Pune, dedicated to nurturing young minds for a brighter future.",
+  icons: {
+    icon: "/images/logo.png",   // <- using PNG
+  },
 };
 
 export default function RootLayout({
